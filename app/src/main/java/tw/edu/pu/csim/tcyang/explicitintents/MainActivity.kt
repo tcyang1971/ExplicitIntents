@@ -1,5 +1,6 @@
 package tw.edu.pu.csim.tcyang.explicitintents
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -17,5 +18,11 @@ class MainActivity : AppCompatActivity() {
         btnNext = findViewById(R.id.btnNext)
         edt = findViewById(R.id.edt)
         edt.setText("https://www.pu.edu.tw")
+
+        btnNext.setOnClickListener({
+            var it = Intent(this@MainActivity, SecondActivity::class.java)
+            startActivity(it)
+        })
+
     }
 }
