@@ -20,7 +20,9 @@ class MainActivity : AppCompatActivity() {
         edt.setText("https://www.pu.edu.tw")
 
         btnNext.setOnClickListener({
-            var it = Intent(this@MainActivity, SecondActivity::class.java)
+            var it = Intent(this@MainActivity, SecondActivity::class.java).apply {
+                putExtra("website", edt.text.toString())
+            }
             startActivity(it)
         })
 
